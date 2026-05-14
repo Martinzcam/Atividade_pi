@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Veículo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="card-detalhe">
+        <h1>Detalhes do Modelo</h1>
+        <img src="{% static 'img/carro_exemplo.jpg' %}" alt="Foto do Veículo" class="img-fluid">
+        
+        <p>Informações técnicas do veículo...</p>
+        
+        <a href="{% url 'veiculos:lista_veiculos' %}">Voltar para a Lista</a>
+    </div>
+</body>
+</html>

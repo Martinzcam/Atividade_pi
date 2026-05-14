@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Veículos</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Veículos Disponíveis</h1>
+        <table>
+            <tr>
+                <td>Civic</td>
+                <td><a href="{% url 'veiculos:detalhe_veiculo' %}">Ver Detalhes</a></td>
+            </tr>
+        </table>
+        <br>
+        <a href="{% url 'veiculos:home_page' %}">Voltar para Home</a>
+    </div>
+</body>
+</html>
