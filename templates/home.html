@@ -1,23 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Home - Concessionária</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header>
-        <img src="{% static 'img/bannerstatic.jpg' %}" alt="Logo Concessionária" width="150">
-        <h1>Sistema de Gestão de Veículos</h1>
-    </header>
+{% extends 'base.html' %}
 
-    <main>
-        <div class="container">
-            <p>Bem-vindo ao sistema da Concessionária.</p>
-            <a href="{% url 'veiculos:lista_veiculos' %}" class="btn">Acessar Catálogo</a>
-            <a href="{% url 'veiculos:detalhe_veiculos' %}" class="btn">Acessar Detalhes</a>
-        </div>
-    </main>
-</body>
-</html>
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <div class="welcome-section">
+        <p>Bem-vindo ao sistema!</p>
+        <a href="{% url 'veiculos:lista_veiculos' %}" class="btn">Acessar Catálogo</a>
+    </div>
+{% endblock %}
